@@ -1,10 +1,8 @@
-# sftp sync extension for VS Code
+# SFTP Enhanced — sftp sync extension for VS Code
 
-Maintained and updated version by [@Natizyskunk](https://github.com/Natizyskunk/) 😀 <br>
-(Forked from the no longer maintained [liximomo's SFTP plugin](https://github.com/liximomo/vscode-sftp.git))
+SFTP/FTP sync with **encrypted password management** (master passphrase, scrypt + AES-256-GCM, host lock on auth failure).
 
-- VS Code marketplace : https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp <br>
-- VSIX release : https://github.com/Natizyskunk/vscode-sftp/releases/
+Fork of [Natizyskunk/vscode-sftp](https://github.com/Natizyskunk/vscode-sftp) (v1.16.3, MIT), itself forked from the no longer maintained [liximomo's SFTP plugin](https://github.com/liximomo/vscode-sftp.git). All credits for the original extension go to their authors.
 
 ---
 
