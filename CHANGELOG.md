@@ -1,3 +1,8 @@
+## 1.17.1 - 2026-07-08
+* New icon: transfer arrows + padlock, to distinguish the fork from the original extension at a glance.
+* Fix the Homepage link of the Marketplace page (pointed to a non-existing branch).
+* README: clarify that configuration documentation lives in the upstream wiki.
+
 ## 1.17.0 - 2026-07-08 (SFTP Enhanced)
 First release of **SFTP Enhanced**, fork of [Natizyskunk/vscode-sftp](https://github.com/Natizyskunk/vscode-sftp) v1.16.3.
 * Rebrand: extension id `sftp-enhanced`, command/settings prefix `sftpEnhanced.*`. Project config file is still `.vscode/sftp.json` (drop-in compatible).

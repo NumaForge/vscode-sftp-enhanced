@@ -2,7 +2,7 @@
   "name": "sftp-enhanced",
   "displayName": "SFTP Enhanced",
   "description": "SFTP/FTP sync with encrypted password management. Fork of Natizyskunk/vscode-sftp.",
-  "version": "1.17.0",
+  "version": "1.17.1",
   "publisher": "numa-forge",
   "author": "Natizyskunk <natan.fourie@hotmail.fr> (https://github.com/Natizyskunk)",
   "engines": {
@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/NumaForge/vscode-sftp-enhanced/issues"
   },
-  "homepage": "https://github.com/NumaForge/vscode-sftp-enhanced/blob/main/README.md",
+  "homepage": "https://github.com/NumaForge/vscode-sftp-enhanced#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/NumaForge/vscode-sftp-enhanced.git"

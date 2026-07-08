@@ -65,6 +65,9 @@ the legacy file is kept untouched for rollback.
 6. Voilà!
 
 ## Documentation
+Configuration and commands work exactly as in the original extension, so the
+**upstream wiki** applies to this fork as well (just remember the command
+category here is `SFTP Enhanced`):
 - [Home](https://github.com/Natizyskunk/vscode-sftp/wiki)
 - [Settings](https://github.com/Natizyskunk/vscode-sftp/wiki/Setting)
 - [Common configuration](https://github.com/Natizyskunk/vscode-sftp/wiki/Common-Configuration)
