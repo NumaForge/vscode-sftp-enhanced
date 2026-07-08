@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { EXTENSION_NAME } from './constants';
+import { askPassword } from './modules/credManager';
 
 export function getOpenTextDocuments(): vscode.TextDocument[] {
   return vscode.workspace.textDocuments;
@@ -60,11 +61,9 @@ export function diffFiles(leftFsPath, rightFsPath, title, option?) {
 }
 
 export function promptForPassword(prompt: string): Promise<string | undefined> {
-  return vscode.window.showInputBox({
-    ignoreFocusOut: true,
-    password: true,
-    prompt,
-  }) as Promise<string | undefined>;
+  // Hook cred-manager: risolve dalla cache cifrata (o chiede e salva);
+  // in caso di errore interno fa gia' fallback al showInputBox classico.
+  return askPassword(prompt);
 }
 
 export function setContextValue(key: string, value: any) {

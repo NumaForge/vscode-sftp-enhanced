@@ -1,5 +1,6 @@
 import upath from './upath';
 import { promptForPassword } from '../host';
+import { onConnectError } from '../modules/credManager';
 import logger from '../logger';
 import app from '../app';
 import { ConnectOption } from './remote-client/remoteClient';
@@ -89,6 +90,9 @@ class KeepAliveRemoteFs {
           return this.fs;
         },
         err => {
+          // Hook cred-manager: su auth-fail blocca l'host (niente retry
+          // automatici -> niente lockout lato server).
+          onConnectError(connectOption.host, err);
           this.fs.end();
           this.invalid('error');
           throw err;

@@ -9,6 +9,7 @@ Fork of [Natizyskunk/vscode-sftp](https://github.com/Natizyskunk/vscode-sftp) (v
 VSCode-SFTP enables you to add, edit or delete files within a local directory and have it sync to a remote server directory using different transfer protocols like FTP or SSH. The most basic setup requires only a few lines of configuration with a wide array of specific settings also available to meet the needs of any user. Both powerful and fast, it helps developers save time by allowing the use of a familiar editor and environment.
 
 - Features
+  - **Encrypted password management** (see below)
   - [Browser remote with Remote Explorer](#remote-explorer)
   - Diff local and remote
   - Sync directory
@@ -18,6 +19,31 @@ VSCode-SFTP enables you to add, edit or delete files within a local directory an
   - Multiple configurations
   - Switchable profiles
   - Temp File support
+
+## Encrypted password management
+
+Instead of typing the SFTP password at every connection (or storing it in plain text
+in `sftp.json`), SFTP Enhanced stores host passwords **encrypted on the client**:
+
+- On first use you choose a **master passphrase** (min 8 chars). It is **never saved**:
+  an AES-256-GCM key is derived from it via scrypt.
+- Each host password is asked **once**, then stored encrypted in
+  `~/.sftp-enhanced-creds/store.json`. The file alone is useless without the master.
+- One master unlock per VS Code session serves **all hosts** — no more prompts.
+- On an **authentication failure** the host is locked (no automatic retries, so no
+  server-side account lockout) and you are asked to update the password.
+- Nothing is required server-side (no SSH keys, no `authorized_keys` changes).
+
+Commands (palette):
+
+| Command | Effect |
+|---|---|
+| `SFTP Enhanced: Update Password` | Update the stored password of a host (e.g. after expiry) |
+| `SFTP Enhanced: Reset Credentials` | Delete master + all stored passwords (does **not** touch `sftp.json`) |
+
+If you used the previous patched-extension setup, the legacy store
+`~/.sftp-cobol-creds` is imported automatically on first run (same master passphrase);
+the legacy file is kept untouched for rollback.
 - [Commands](https://github.com/Natizyskunk/vscode-sftp/wiki/Commands)
 - [Debug](#debug)
 - [FAQ](#FAQ)

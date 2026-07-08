@@ -64,3 +64,7 @@ export const COMMAND_REMOTEEXPLORER_VIEW_CONTENT = 'sftpEnhanced.viewContent';
 
 export const COMMAND_CREATE_FOLDER = 'sftpEnhanced.create.folder';
 export const COMMAND_CREATE_FILE = 'sftpEnhanced.create.file';
+
+// credential manager (encrypted password store)
+export const COMMAND_UPDATE_PASSWORD = 'sftpEnhanced.updatePassword';
+export const COMMAND_RESET_CREDENTIALS = 'sftpEnhanced.resetCredentials';

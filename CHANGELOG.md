@@ -1,3 +1,14 @@
+## 1.17.0 - 2026-07-08 (SFTP Enhanced)
+First release of **SFTP Enhanced**, fork of [Natizyskunk/vscode-sftp](https://github.com/Natizyskunk/vscode-sftp) v1.16.3.
+* Rebrand: extension id `sftp-enhanced`, command/settings prefix `sftpEnhanced.*`. Project config file is still `.vscode/sftp.json` (drop-in compatible).
+* New Feature : **Encrypted password management** (master passphrase, never stored -> scrypt -> AES-256-GCM). Passwords are asked once and stored encrypted in `~/.sftp-enhanced-creds/store.json`; one master unlock per session serves all hosts.
+* New Feature : on authentication failure the host is locked (no automatic retries -> no server-side account lockout) and the user is prompted to update the password.
+* New commands : `SFTP Enhanced: Update Password`, `SFTP Enhanced: Reset Credentials`.
+* Transparent migration of the legacy credential store `~/.sftp-cobol-creds` (created by the patched-extension setup); the legacy file is kept for rollback.
+* Upgrade `ssh2` to v1.17.0: fixes the `util.isDate` crash on recent Node/VS Code versions and brings upstream security fixes.
+* Fix jest preprocessor for the Jest 28+ transformer API (upstream test suites could not load).
+* New unit tests for the credential manager (45 tests).
+
 ## 1.16.3 - 2023-06-16
 * [#356] New Feature : Upload to all profiles (Pull request [#313](https://github.com/Natizyskunk/vscode-sftp/pull/313) from @wewawa vscode-sftp:create_multi_command).
 * [#357] Fix : Correcting Typo 'avaliable' => 'available' (Pull request [#343](https://github.com/Natizyskunk/vscode-sftp/pull/343) from @kjo-sdds vscode-sftp:develop).
