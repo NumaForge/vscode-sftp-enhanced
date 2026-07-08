@@ -9,13 +9,12 @@
     "vscode": "^1.64.2"
   },
   "bugs": {
-    "url": "https://github.com/Natizyskunk/vscode-sftp/issues",
-    "email": "natan.fourie@hotmail.fr"
+    "url": "https://github.com/NumaForge/vscode-sftp-enhanced/issues"
   },
-  "homepage": "https://github.com/Natizyskunk/vscode-sftp/blob/master/README.md",
+  "homepage": "https://github.com/NumaForge/vscode-sftp-enhanced/blob/main/README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Natizyskunk/vscode-sftp.git"
+    "url": "https://github.com/NumaForge/vscode-sftp-enhanced.git"
   },
   "license": "MIT",
   "categories": [
