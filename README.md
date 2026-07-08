@@ -44,24 +44,23 @@ Commands (palette):
 If you used the previous patched-extension setup, the legacy store
 `~/.sftp-cobol-creds` is imported automatically on first run (same master passphrase);
 the legacy file is kept untouched for rollback.
-- [Commands](https://github.com/Natizyskunk/vscode-sftp/wiki/Commands)
-- [Debug](#debug)
-- [FAQ](#FAQ)
 
 ## Installation
 
+> Uninstall (or disable) any other SFTP extension first (`liximomo.sftp`,
+> `Natizyskunk.sftp`): two SFTP extensions active on the same workspace would
+> sync files twice.
+
 ### Method 1 (Recommended : Auto update)
 1. Select Extensions (Ctrl + Shift + X).
-2. Uninstall current sftp extension from @liximomo.
-3. Install new extension directly from VS Code Marketplace : https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp.
-4. Voilà!
+2. Install **SFTP Enhanced** directly from the VS Code Marketplace : https://marketplace.visualstudio.com/items?itemName=numa-forge.sftp-enhanced.
+3. Voilà!
 
-### Method 2 (Manual update)
-To install just follow these steps from within VSCode:
-1. Select Extensions (Ctrl + Shift + X).
-2. Uninstall current sftp extension from @liximomo.
-3. Open "More Action" menu(ellipsis on the top) and click "Install from VSIX…".
-4. Locate VSIX file and select.
+### Method 2 (Manual, from VSIX)
+1. Download the `.vsix` from the [GitHub releases](https://github.com/NumaForge/vscode-sftp-enhanced/releases).
+2. Select Extensions (Ctrl + Shift + X).
+3. Open "More Action" menu (ellipsis on the top) and click "Install from VSIX…".
+4. Locate the VSIX file and select.
 5. Reload VSCode.
 6. Voilà!
 
@@ -324,7 +323,9 @@ In sftp.json:
 You can see all the Frequently Asked Questions [here](./FAQ.md).
 
 ## Donation
-If this project helped you reduce development time and you wish to contribute financially
+Most of this extension is the work of the original authors ([@liximomo](https://github.com/liximomo)
+and [@Natizyskunk](https://github.com/Natizyskunk)). If this project helped you reduce development
+time and you wish to contribute financially, consider supporting the original maintainer:
 
 ### Buy Me a Coffee
 [![Buy Me A Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png)](https://www.buymeacoffee.com/Natizyskunk)
